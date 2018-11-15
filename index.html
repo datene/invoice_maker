@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice maker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <h2 class="main-title">
+          Products <a href="#" class="collapse-segment" data-collapse="#products-wrapper"><i class="fas fa-chevron-down"></i></a> <span class="updated">Save</span>
+        </h2>
+        <div id="products-wrapper">
+          <a href="#" id="clear-all">
+            Clear all products
+          </a>
+          <table class="table table-striped" id="products">
+            <thead>
+              <tr>
+                <th>
+                  Title
+                </th>
+                <th>
+                  Price
+                </th>
+                <th>
+                  Tax
+                </th>
+                <th>
+                  Full price
+                </th>
+                <th>
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+
+          <table class="table">
+            <tbody>
+              <tr>
+                <form action="/" id="new-product">
+                  <td>
+                    <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control" step="0.01" name="price" id="price" placeholder="Price">
+                  </td>
+                  <td>
+                    <select id="tax" class="form-control" name="tax">
+                      <option value="">Tax</option>
+                      <option value="0">0%</option>
+                      <option value="1.06">6%</option>
+                      <option value="1.21">21%</option>
+                    </select>
+                  </td>
+                  <td>
+
+                  </td>
+                  <td>
+                    <input type="submit" value="Add" class="btn btn-primary">
+                  </td>
+                </form>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>
+          Invoice
+          <a href="#" class="collapse-segment" data-collapse="#invoice-wrapper"><i class="fas fa-chevron-down"></i></a>
+        </h2>
+
+        <div id="invoice-wrapper">
+          <table class="table table-striped" id="invoice">
+            <thead>
+              <tr>
+                <th>
+                  Title
+                </th>
+                <th>
+                  Price
+                </th>
+                <th>
+                  Tax
+                </th>
+                <th>
+                  Full price
+                </th>
+                <th>
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+          <h3>
+            Total
+          </h3>
+          <table class="table total-sum">
+            <tbody>
+              <tr>
+                <td>
+                  <strong>
+                    Flat fee
+                  </strong>
+                </td>
+                <td class="flat-fee">
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>
+                    Tax
+                  </strong>
+                </td>
+                <td class="tax-fee">
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>
+                    Full fee
+                  </strong>
+                </td>
+                <td class="full-fee">
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="all.js"></script>
+</body>
+</html>

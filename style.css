@@ -1,0 +1,26 @@
+td {
+  vertical-align: middle !important;
+}
+
+.total-sum tr td:nth-child(2) {
+  text-align: right;
+}
+
+h2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.main-title .updated {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.collapse-segment {
+  font-size: 14px;
+  margin-left: 15px;
+}
