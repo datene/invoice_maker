@@ -64,7 +64,7 @@ function updateTally() {
     return sum;
   }, 0);
   const totalTax = allInvoiceProducts.reduce((sum, item) => {
-    sum += ((item.tax === 0 ? item.flatPrice : (item.flatPrice * item.tax)) - item.flatPrice);
+    sum += ((item.tax === 0 ? item.flatPrice : ((item.flatPrice * item.tax)) - item.flatPrice) * item.amount);
     return sum;
   }, 0);
 
