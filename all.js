@@ -228,7 +228,7 @@ function handleCheck(event) {
   const currentRowFlatPrice = currentRow.querySelector('#price-edit').value;
   const currentRowTax = currentRow.querySelector('#tax-edit').value;
   currentProduct.title = currentRowTitle;
-  currentProduct.flatPrice = parseFloat(currentRowFlatPrice);
+  currentProduct.flatPrice = parseFloat(currentRowFlatPrice) * 100;
   currentProduct.tax = parseFloat(currentRowTax);
   currentProduct.fullPrice = (currentProduct.tax === 0) ? currentProduct.flatPrice : currentProduct.flatPrice * currentProduct.tax;
   const currentInvoiceProduct = allInvoiceProducts.find(product => product.id == productId);
@@ -288,7 +288,7 @@ function editButton(event) {
   <input type="text" class="form-control" name="title" id="title-edit" placeholder="Title" value="${currentProduct.title}">
   `
   currentRowFlatPrice.innerHTML = `
-  <input type="number" class="form-control" step="0.01" name="price" id="price-edit" placeholder="Price" value="${currentProduct.flatPrice}">
+  <input type="number" class="form-control" step="0.01" name="price" id="price-edit" placeholder="Price" value="${currentProduct.flatPrice / 100}">
   `
   currentRowTax.innerHTML = `
   <select id="tax-edit" class="form-control" name="tax">
